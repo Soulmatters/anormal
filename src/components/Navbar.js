@@ -1,36 +1,25 @@
 import React from 'react';
 import Link from 'gatsby-link';
-
-import github from '../img/github-icon.svg';
+import AppBar from 'material-ui/AppBar';
+import IconButton from 'material-ui/IconButton';
+import NavigationClose from 'material-ui/svg-icons/navigation/close';
+import FlatButton from 'material-ui/FlatButton';
 import logo from '../img/logo.svg';
 
 const Navbar = () => (
-  <nav className="navbar is-transparent">
-    <div className="container">
-      <div className="navbar-brand">
-        <Link to="/" className="navbar-item">
-          <figure className="image">
-            <img src={logo} alt="Kaldi" style={{ width: '88px' }} />
-          </figure>
-        </Link>
-      </div>
-      <div className="navbar-start">
-        <Link className="navbar-item" to="/about">
-          About
-        </Link>
-        <Link className="navbar-item" to="/products">
-          Products
-        </Link>
-      </div>
-      <div className="navbar-end">
-        <a className="navbar-item" href="https://github.com/AustinGreen/gatsby-netlify-cms-boilerplate" target="_blank" rel="noopener noreferrer">
-          <span className="icon">
-            <img src={github} alt="Github" />
-          </span>
-        </a>
-      </div>
-    </div>
-  </nav>
+  <AppBar
+    title={ <Link href="/"><img src={logo} alt='Anormal space' style={{ width: '60px', marginRight: 10 }} /> Anormal Space</Link> }
+    iconStyleLeft={{display: 'none'}}
+    titleStyle={{
+      display: 'flex',
+      flexFlow: 'wrap row',
+      color: '#fff'
+    }}
+  />
+            
+         
+   
+  
 );
 
 export default Navbar;
