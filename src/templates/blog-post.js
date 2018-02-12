@@ -4,7 +4,7 @@ import Helmet from 'react-helmet';
 import Content, { HTMLContent } from '../components/Content';
 
 export const BlogPostTemplate = ({
-  content, contentComponent, description, title, helmet,
+  content, contentComponent, description, title, helmet, image,
 }) => {
   const PostContent = contentComponent || Content;
 
@@ -15,6 +15,7 @@ export const BlogPostTemplate = ({
         <div className="columns">
           <div className="column is-10 is-offset-1">
             <h1 className="title is-size-2 has-text-weight-bold is-bold-light">{title}</h1>
+            <img className="headerImage" src={image}/>
             <p>{description}</p>
             <PostContent content={content} />
           </div>
@@ -30,8 +31,8 @@ export default ({ data }) => {
   return (<BlogPostTemplate
     content={post.html}
     contentComponent={HTMLContent}
-    description={post.frontmatter.description}
-    helmet={<Helmet title={`Blog | ${post.frontmatter.title}`} />}
+    helmet={<Helmet title={`AnormalSpace | ${post.frontmatter.title}`} />}
+    image={post.frontmatter.image}
     title={post.frontmatter.title}
   />);
 };
@@ -45,6 +46,7 @@ export const pageQuery = graphql`
         date(formatString: "MMMM DD, YYYY")
         title
         description
+        image
       }
     }
   }
