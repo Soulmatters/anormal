@@ -8,13 +8,9 @@ import logo from '../img/logo.svg';
 
 const Navbar = () => (
   <AppBar
-    title={ <Link href="/"><img src={logo} alt='Anormal space' style={{ width: '60px', marginRight: 10 }} /> Anormal Space</Link> }
+    title={ <Link href="/"><img src={logo} alt='Anormal space' style={{ width: '60px', marginRight: 10 }} /> </Link> }
     iconStyleLeft={{display: 'none'}}
-    titleStyle={{
-      display: 'flex',
-      flexFlow: 'wrap row',
-      color: '#fff'
-    }}
+  
   />
             
          

@@ -11,15 +11,15 @@ export const BlogPostTemplate = ({
   return (
     <section className="section">
       { helmet || ''}
-      <div className="container content">
-        <div className="columns">
-          <div className="column is-10 is-offset-1">
-            <h1 className="title is-size-2 has-text-weight-bold is-bold-light">{title}</h1>
+      <div className="containerPost">
+       
+         
             <img className="headerImage" src={image}/>
-            <p>{description}</p>
+            <h1 className="title ">{title}</h1>
+            <div className="text">
             <PostContent content={content} />
-          </div>
-        </div>
+         </div>
+       
       </div>
     </section>
   );

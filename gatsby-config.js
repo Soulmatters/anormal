@@ -4,7 +4,16 @@ module.exports = {
   },
   plugins: [
     'gatsby-plugin-react-helmet',
-    'gatsby-plugin-sass',
+    {
+      resolve: `gatsby-plugin-google-fonts`,
+      options: {
+        fonts: [
+          `raleway`,
+          `source sans pro\:300,400,800` // you can also specify font weights and styles
+        ]
+      }
+    },
+
     {
       resolve: 'gatsby-source-filesystem',
       options: {
