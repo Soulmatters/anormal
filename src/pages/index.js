@@ -47,10 +47,12 @@ export default class IndexPage extends React.Component {
                 <Card
                   key={Math.random()}
                   style={{
-                    width: '100%',
+                    width: 'calc(100% - 40px)',
                     height: 'auto',
-                    margin: '20px',
+                    margin: '20px auto',
                     boxSizing: 'border-box',
+                    borderRadius: '5px',
+                    borderBottom: 'solid 4px #2196f3'
                   }}
                 >
                   <CardTitle

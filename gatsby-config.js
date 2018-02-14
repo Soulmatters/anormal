@@ -6,6 +6,12 @@ module.exports = {
   plugins: [
     'gatsby-plugin-react-helmet', 'gatsby-plugin-offline',
     {
+      resolve: `@debiki/gatsby-plugin-talkyard`,
+      options: {
+        talkyardServerUrl: 'https://comments-demo.talkyard.io'
+      }
+    },
+    {
       resolve: `gatsby-plugin-sitemap`
     },
     {

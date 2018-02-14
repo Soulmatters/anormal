@@ -10,6 +10,7 @@ export const BlogPostTemplate = ({
   title,
   helmet,
   image,
+  path
 }) => {
   const PostContent = contentComponent || Content
 
@@ -22,6 +23,7 @@ export const BlogPostTemplate = ({
         <div className="text">
           <PostContent content={content} />
         </div>
+        
       </div>
     </section>
   )
@@ -37,6 +39,8 @@ export default ({ data }) => {
       helmet={<Helmet title={`AnormalSpace | ${post.frontmatter.title}`} />}
       image={post.frontmatter.image}
       title={post.frontmatter.title}
+      path={post.frontmatter.path}      
+      shortname={'anormal-space-1'}
     />
   )
 }
