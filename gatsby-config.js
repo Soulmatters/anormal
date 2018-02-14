@@ -1,9 +1,13 @@
 module.exports = {
   siteMetadata: {
     title: 'Anormal Space',
+    siteUrl: `https://anormal.space`,
   },
   plugins: [
     'gatsby-plugin-react-helmet', 'gatsby-plugin-offline',
+    {
+      resolve: `gatsby-plugin-sitemap`
+    },
     {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
