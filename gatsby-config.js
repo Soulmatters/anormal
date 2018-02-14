@@ -48,7 +48,7 @@ module.exports = {
         name: "Anormal Space",
         short_name: "anormal   ",
         start_url: "/",
-        background_color: "#fafafa",
+        background_color: "#fff",
         theme_color: "#2196f3",
         display: "standalone",
         icons: [
