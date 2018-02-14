@@ -45,7 +45,7 @@ export default class IndexPage extends React.Component {
                 boxSizing: 'border-box'
               }}>
              
-    <CardTitle  href={post.frontmatter.path} title={post.frontmatter.title} />
+    <CardTitle  href={post.frontmatter.path} title={post.frontmatter.title} key={post.frontmatter.title} />
     <CardText>
       {post.excerpt}
     </CardText>
