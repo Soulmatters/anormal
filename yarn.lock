@@ -3801,6 +3801,12 @@ gatsby-plugin-favicon@^2.1.1:
     babel-runtime "^6.26.0"
     favicons-webpack-plugin "0.0.7"
 
+gatsby-plugin-google-analytics@^1.0.19:
+  version "1.0.19"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-google-analytics/-/gatsby-plugin-google-analytics-1.0.19.tgz#e9112f01118e0a16eb61f1b39bb0757feba88f2b"
+  dependencies:
+    babel-runtime "^6.26.0"
+
 gatsby-plugin-google-fonts@^0.0.3:
   version "0.0.3"
   resolved "https://registry.yarnpkg.com/gatsby-plugin-google-fonts/-/gatsby-plugin-google-fonts-0.0.3.tgz#36a09e7ed3b795b0a81e9404b4c487e0fdfa46ab"
