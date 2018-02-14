@@ -1,26 +1,33 @@
-import React from "react";
-import Link from "gatsby-link";
-import Script from "react-load-script";
-import graphql from "graphql";
-import {Card, CardActions, CardHeader, CardMedia, CardTitle, CardText} from 'material-ui/Card';
-import FlatButton from 'material-ui/FlatButton';
+import React from 'react'
+import Link from 'gatsby-link'
+import Script from 'react-load-script'
+import graphql from 'graphql'
+import {
+  Card,
+  CardActions,
+  CardHeader,
+  CardMedia,
+  CardTitle,
+  CardText,
+} from 'material-ui/Card'
+import FlatButton from 'material-ui/FlatButton'
 export default class IndexPage extends React.Component {
   handleScriptLoad() {
     if (typeof window !== `undefined` && window.netlifyIdentity) {
-      window.netlifyIdentity.on("init", user => {
+      window.netlifyIdentity.on('init', user => {
         if (!user) {
-          window.netlifyIdentity.on("login", () => {
-            document.location.href = "/admin/";
-          });
+          window.netlifyIdentity.on('login', () => {
+            document.location.href = '/admin/'
+          })
         }
-      });
+      })
     }
-    window.netlifyIdentity.init();
+    window.netlifyIdentity.init()
   }
 
   render() {
-    const { data } = this.props;
-    const { edges: posts } = data.allMarkdownRemark;
+    const { data } = this.props
+    const { edges: posts } = data.allMarkdownRemark
 
     return (
       <section className="section">
@@ -33,36 +40,35 @@ export default class IndexPage extends React.Component {
             <h1 className="h1-is-center">Blog... mai puțin normal</h1>
           </div>
 
-      <div className="cards">
-          {posts
-            .filter(post => post.node.frontmatter.templateKey === "blog-post")
-            .map(({ node: post }) => (
-
-              <Card key={Math.random()} style={{
-                width: '100%',
-                height: 'auto',
-                margin: '20px',
-                boxSizing: 'border-box'
-              }}>
-             
-    <CardTitle  href={post.frontmatter.path} title={post.frontmatter.title}  />
-    <CardText>
-      {post.excerpt}
-    </CardText>
-    <CardActions>
-   <Link to={post.frontmatter.path} > <FlatButton
-      label="Vezi tot"
-      primary={true}
-    /></Link>
-    </CardActions>
-
+          <div className="cards">
+            {posts
+              .filter(post => post.node.frontmatter.templateKey === 'blog-post')
+              .map(({ node: post }) => (
+                <Card
+                  key={Math.random()}
+                  style={{
+                    width: '100%',
+                    height: 'auto',
+                    margin: '20px',
+                    boxSizing: 'border-box',
+                  }}
+                >
+                  <CardTitle
+                    href={post.frontmatter.path}
+                    title={post.frontmatter.title}
+                  />
+                  <CardText>{post.excerpt}</CardText>
+                  <CardActions>
+                    <Link to={post.frontmatter.path}>
+                      <FlatButton label="Vezi tot" primary={true} />
+                    </Link>
+                  </CardActions>
                 </Card>
-            
-            ))}
-            </div>
+              ))}
+          </div>
         </div>
       </section>
-    );
+    )
   }
 }
 
@@ -84,4 +90,4 @@ export const pageQuery = graphql`
       }
     }
   }
-`;
+`

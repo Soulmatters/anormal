@@ -1,41 +1,45 @@
-import React from 'react';
-import graphql from 'graphql';
-import Helmet from 'react-helmet';
-import Content, { HTMLContent } from '../components/Content';
+import React from 'react'
+import graphql from 'graphql'
+import Helmet from 'react-helmet'
+import Content, { HTMLContent } from '../components/Content'
 
 export const BlogPostTemplate = ({
-  content, contentComponent, description, title, helmet, image,
+  content,
+  contentComponent,
+  description,
+  title,
+  helmet,
+  image,
 }) => {
-  const PostContent = contentComponent || Content;
+  const PostContent = contentComponent || Content
 
   return (
     <section className="section">
-      { helmet || ''}
+      {helmet || ''}
       <div className="containerPost">
-       
-         
-            <img className="headerImage" src={image}/>
-            <h1 className="title ">{title}</h1>
-            <div className="text">
-            <PostContent content={content} />
-         </div>
-       
+        <img className="headerImage" src={image} />
+        <h1 className="title ">{title}</h1>
+        <div className="text">
+          <PostContent content={content} />
+        </div>
       </div>
     </section>
-  );
-};
+  )
+}
 
 export default ({ data }) => {
-  const { markdownRemark: post } = data;
+  const { markdownRemark: post } = data
 
-  return (<BlogPostTemplate
-    content={post.html}
-    contentComponent={HTMLContent}
-    helmet={<Helmet title={`AnormalSpace | ${post.frontmatter.title}`} />}
-    image={post.frontmatter.image}
-    title={post.frontmatter.title}
-  />);
-};
+  return (
+    <BlogPostTemplate
+      content={post.html}
+      contentComponent={HTMLContent}
+      helmet={<Helmet title={`AnormalSpace | ${post.frontmatter.title}`} />}
+      image={post.frontmatter.image}
+      title={post.frontmatter.title}
+    />
+  )
+}
 
 export const pageQuery = graphql`
   query BlogPostByPath($path: String!) {
@@ -50,4 +54,4 @@ export const pageQuery = graphql`
       }
     }
   }
-`;
+`
