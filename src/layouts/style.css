@@ -27,7 +27,7 @@ a{
 }
 .containerPost{
     display: grid;
-    grid-template-columns: 300px auto 300px;
+    grid-template-columns: auto 700px auto;
     grid-template-areas:
     "image image image"
     " . text . ";
