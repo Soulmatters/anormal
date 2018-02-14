@@ -38,14 +38,14 @@ export default class IndexPage extends React.Component {
             .filter(post => post.node.frontmatter.templateKey === "blog-post")
             .map(({ node: post }) => (
 
-              <Card style={{
+              <Card key={Math.random()} style={{
                 width: '100%',
                 height: 'auto',
                 margin: '20px',
                 boxSizing: 'border-box'
               }}>
              
-    <CardTitle  href={post.frontmatter.path} title={post.frontmatter.title} key={post.frontmatter.title} />
+    <CardTitle  href={post.frontmatter.path} title={post.frontmatter.title}  />
     <CardText>
       {post.excerpt}
     </CardText>
