@@ -5,7 +5,7 @@ path: 2016/11/24/vise-placute
 title: Vise placute!
 date: 2016-11-24T15:15:41+02:00
 description: Noi suntem oameni și asta ne face superiori chiar și-n topul celor mai negative și de evitat trăsături.Poluarea fonică cu suflantele de frunze, nu constituie niciun factor stresor pentru n
-image: /content/images/2017/01/toy-1355442_1920.jpg
+image: /img/2017/01/toy-1355442_1920.jpg
 
 ---
 

@@ -5,7 +5,7 @@ path: 2016/12/12/rosu-negru
 title: Roșu-Negru
 date: 2016-12-12T12:56:45+02:00
 description: Acum noul negru este cel roșu.Roșu ca hainele lui moșu', roșu ca ouăle pascale, roșu ca-n fiecare lună, roșu că lumina caselor primitoare. Roșu peste tot.Fii optimist și privește 
-image: /content/images/2017/01/banger-160847.png
+image: /img/2017/01/banger-160847.png
 
 ---
 Acum noul negru este cel roșu.
