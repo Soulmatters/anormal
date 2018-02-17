@@ -33,11 +33,12 @@ a{
     " . text . ";
 
 }
-.containerPost .headerImage{
+.containerPost .gatsby-image-outer-wrapper{
     grid-area: image;
 }
 .containerPost h1{
     grid-area: image;
+    z-index: 69;
     font-size: calc(0.10vw * 40);
     font-family: 'Raleway', sans-serif;
     font-weight: 800;

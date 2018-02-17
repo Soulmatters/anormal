@@ -4,13 +4,9 @@ module.exports = {
     siteUrl: `https://anormal.space`,
   },
   plugins: [
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
     'gatsby-plugin-react-helmet', 'gatsby-plugin-offline',
-    {
-      resolve: `@debiki/gatsby-plugin-talkyard`,
-      options: {
-        talkyardServerUrl: 'https://comments-demo.talkyard.io'
-      }
-    },
     {
       resolve: `gatsby-plugin-sitemap`
     },
@@ -23,18 +19,31 @@ module.exports = {
         ]
       }
     },
-
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 590,
+            },
+          },
+          ]
+        }
+      },         
+          
     {
       resolve: 'gatsby-source-filesystem',
       options: {
-        path: `${__dirname}/src/pages`,
+        path: `${__dirname}/src/pages/blog`,
         name: 'pages',
       },
     },
     {
       resolve: 'gatsby-source-filesystem',
       options: {
-        path: `${__dirname}/src/img`,
+        path: `${__dirname}/static/img`,
         name: 'images',
       },
     },
@@ -107,5 +116,6 @@ module.exports = {
         anonymize: true,
       },
     },
+   
   ],
 };

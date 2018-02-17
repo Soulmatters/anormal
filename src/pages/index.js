@@ -2,6 +2,7 @@ import React from 'react'
 import Link from 'gatsby-link'
 import Script from 'react-load-script'
 import graphql from 'graphql'
+import Image from 'gatsby-image'
 import {
   Card,
   CardActions,
@@ -55,6 +56,12 @@ export default class IndexPage extends React.Component {
                     borderBottom: 'solid 4px #2196f3'
                   }}
                 >
+                 <CardMedia>
+      <Image resolutions={post.frontmatter.image.childImageSharp.resolutions}  style={{
+        height: 400,
+        objectFit: 'cover'
+      }} />
+    </CardMedia>
                   <CardTitle
                     href={post.frontmatter.path}
                     title={post.frontmatter.title}
@@ -86,7 +93,22 @@ export const pageQuery = graphql`
             templateKey
             date(formatString: "MMMM DD, YYYY")
             path
-            image
+            image {
+              childImageSharp {
+                resolutions(
+                  width: 740,
+                  height:400,
+                  cropFocus: CENTER,
+                  quality: 100,
+                  toFormat: WEBP,
+                 
+                ) {
+                  src
+                  srcSet
+                  base64
+                }
+              }
+            }
           }
         }
       }

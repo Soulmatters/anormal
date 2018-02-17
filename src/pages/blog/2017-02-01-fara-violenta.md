@@ -5,7 +5,7 @@ path: 2017/02/01/fara-violenta
 title: Codriá
 date: 2017-02-01T10:01:50+02:00
 description: Cui îi pasă, cine mă aude, cine mă ia în seamă? Eu nu contez.În continuare îmi plătesc impozitele, deși aș putea să nu o mai fac, ipotetic vorbind. Atât timp cât mă încadrez în cei 45.000 
-image: /img/2017/02/no-violence-5.png
+image: killer-820017_640-1.jpg
 
 ---
 Cui îi pasă, cine mă aude, cine mă ia în seamă? Eu nu contez.
