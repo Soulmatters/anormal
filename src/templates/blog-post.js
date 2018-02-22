@@ -15,8 +15,7 @@ export const BlogPostTemplate = ({
 
   return (
     <section className="section">
-      <div className="container
-      
+      <div className="containerPost">
       {helmet || ''}
       <Image className="headerImage" resolutions={ resolutions }/>
         <h1 className="title " dangerouslySetInnerHTML={{ __html: title}}/>
