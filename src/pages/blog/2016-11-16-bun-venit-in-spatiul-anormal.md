@@ -5,7 +5,11 @@ path: 2016/11/16/bun-venit-in-spatiul-anormal
 title: Bun venit în spațiul ANormal!
 date: 2016-11-16T14:25:41+02:00
 description: De ce ANormal?Pentru că nimic nu mai pare a fi normal. Iluzia democrației se rupe. Oamenii încep să vadă că de fapt votul nu mai contează și indiferent 
+<<<<<<< HEAD
 image: "/img/2017/02/ru_tbbsuh_8-edan-cohen-1.jpg"
+=======
+image: ru_tbbsuh_8-edan-cohen-1.jpg
+>>>>>>> bef42f787ce162244ce9d4e14b9d39dd59df4e07
 
 ---
 #De ce ANormal?

@@ -3,7 +3,6 @@ import Link from 'gatsby-link'
 import Script from 'react-load-script'
 import graphql from 'graphql'
 import Image from 'gatsby-image'
-
 import {
   Card,
   CardActions,

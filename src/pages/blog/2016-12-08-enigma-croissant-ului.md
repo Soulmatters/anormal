@@ -5,7 +5,11 @@ path: 2016/12/08/enigma-croissant-ului
 title: Enigma cornului
 date: 2016-12-08T17:59:12+02:00
 description: E frig, dar ți-e și foame.  Crezi ca îți iei un corn cu ciocolată și primești unul cu dulceață de vișine. Ai nevoie de dulceață în lumea asta amară, dar de la oameni. Tu ai cerut un corn c
+<<<<<<< HEAD
 image: "/img/2017/01/background-17943_1920.jpg"
+=======
+image: background-17943_1920.jpg
+>>>>>>> bef42f787ce162244ce9d4e14b9d39dd59df4e07
 
 ---
 E frig, dar ți-e și foame.  Crezi ca îți iei un corn cu ciocolată și primești unul cu dulceață de vișine. 
