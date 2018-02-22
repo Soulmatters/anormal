@@ -40,7 +40,6 @@ export default ({ data }) => {
        <meta name="description" content={post.excerpt.substring(0, 160).replace(/(<([^>]+)>)/ig, "")} />
        <meta property="og:title" content={`${post.title} | Anormal Space `} />
       <meta property="og:type" content="article" />
-      <meta property="og:url" content={location.href} />
       <meta property="og:image" content={post.featured_media.localFile.childImageSharp.resolutions.src} />
       <meta property="og:description" content={post.excerpt.substring(0, 160).replace(/(<([^>]+)>)/ig, "")} />
     </Helmet>}
