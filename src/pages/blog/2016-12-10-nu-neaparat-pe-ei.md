@@ -5,7 +5,7 @@ path: 2016/12/10/nu-neaparat-pe-ei
 title: Nu neapărat pe ei...
 date: 2016-12-10T11:08:51+02:00
 description: Nu este drept. Urăsc mulți oameni dar nu pe ei neapărat, ci pârți din ei.Vor să facă multe deodată, se aruncă cu capul înainte și desigur, că sfârșesc cumva. Poate precum un țap c
-image: /img/2017/01/pasterze-glacier-633794_1280.jpg
+image: "/img/2017/01/pasterze-glacier-633794_1280.jpg"
 
 ---
 Nu este drept. Urăsc mulți oameni dar nu pe ei neapărat, ci *pârți* din ei.

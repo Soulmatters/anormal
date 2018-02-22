@@ -4,13 +4,8 @@ module.exports = {
     siteUrl: `https://anormal.space`,
   },
   plugins: [
+      
     'gatsby-plugin-react-helmet', 'gatsby-plugin-offline',
-    {
-      resolve: `@debiki/gatsby-plugin-talkyard`,
-      options: {
-        talkyardServerUrl: 'https://comments-demo.talkyard.io'
-      }
-    },
     {
       resolve: `gatsby-plugin-sitemap`
     },
@@ -23,21 +18,20 @@ module.exports = {
         ]
       }
     },
-
     {
-      resolve: 'gatsby-source-filesystem',
+      resolve: `gatsby-transformer-remark`,
       options: {
-        path: `${__dirname}/src/pages`,
-        name: 'pages',
-      },
-    },
-    {
-      resolve: 'gatsby-source-filesystem',
-      options: {
-        path: `${__dirname}/src/img`,
-        name: 'images',
-      },
-    },
+        plugins: [
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 590,
+            },
+          },
+          ]
+        }
+      },         
+          
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
     {
@@ -46,13 +40,7 @@ module.exports = {
         plugins: [],
       },
     },
-    {
-      resolve: 'gatsby-plugin-netlify-cms',
-      options: {
-        modulePath: `${__dirname}/src/cms/cms.js`,
-      },
-    },
-    {
+     {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: "Anormal Space",
@@ -107,5 +95,43 @@ module.exports = {
         anonymize: true,
       },
     },
+    `gatsby-transformer-sharp`,
+`gatsby-plugin-sharp`,
+{
+  resolve: "gatsby-source-wordpress",
+  options: {
+    /*
+      * The base URL of the Wordpress site without the trailingslash and the protocol. This is required.
+      * Example : 'gatsbyjsexamplewordpress.wordpress.com' or 'www.example-site.com'
+      */
+    baseUrl: "api.anormal.space",
+    // The protocol. This can be http or https.
+    protocol: "http",
+    // Indicates whether the site is hosted on wordpress.com.
+    // If false, then the asumption is made that the site is self hosted.
+    // If true, then the plugin will source its content on wordpress.com using the JSON REST API V2.
+    // If your site is hosted on wordpress.org, then set this to false.
+    hostingWPCOM: false,
+    // If useACF is true, then the source plugin will try to import the Wordpress ACF Plugin contents.
+    // This feature is untested for sites hosted on Wordpress.com.
+    // Defaults to true.
+    useACF: true,
+    auth: {
+     
+      // then add your clientId, clientSecret, username, and password here
+     
+      wpcom_user: "paul.cozma@sm-design.ro",
+      wpcom_pass: "nnijJ*P*pS^pvHON",
+    },
+    // Set verboseOutput to true to display a verbose output on `npm run develop` or `npm run build`
+    // It can help you debug specific API Endpoints problems
+    verboseOutput: false,
+    // Search and Replace Urls across WordPress content
+    searchAndReplaceContentUrls: {
+      sourceUrl: "http://api.anormal.space",
+      replacementUrl: "http://api.anormal.space",
+    },
+  },
+},
   ],
 };

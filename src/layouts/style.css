@@ -1,24 +1,31 @@
 body{
     margin:0;
     padding:0;
+    background: #6a3093; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #6a3093, #a044ff); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #6a3093, #a044ff); 
 }
 
 a{
     text-decoration: none;
 }
 
-.container{
-        
-}
+
 .cards{
-    max-width: 780px;
-    margin: 20px auto;
-    width:100%;
     box-sizing: border-box;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 360px));
+    grid-gap: 20px;
+    justify-content: center;
+}
+@media(max-width:386px){
+    .cardName{
+        margin:10px;
+    }
 }
 .h1-is-center{
     text-align: center;
-    font-size: 50px;
+    font-size: 70px;
 }
 .headerImage{
     width: 100%;
@@ -33,10 +40,16 @@ a{
     " . text . ";
 
 }
-.containerPost .headerImage{
+.containerPost .gatsby-image-outer-wrapper{
     grid-area: image;
 }
-.containerPost h1{
+.gatsby-image-wrapper{
+    display: block !important;
+}
+* {
+    font-family: 'Raleway', sans-serif;
+}
+.containerPost .title{
     grid-area: image;
     font-size: calc(0.10vw * 40);
     font-family: 'Raleway', sans-serif;
@@ -46,6 +59,8 @@ a{
     background: rgb(33, 150, 243);
     color:#fff;
     padding: 10px;
+    position: relative;
+
 }
 @media(max-width:1100px){
     .containerPost{
@@ -59,13 +74,48 @@ a{
     .containerPost .text{
         margin:0 auto;
         padding:20px;
+        
     }  
 }
 .containerPost .text{
     grid-area: text;
     font-size: 19px;
-    font-family: 'Raleway'
+    background: #fff;
+    padding: 20px;
+    
 }
 .text img{
     max-width: 100%;
+}
+
+.menu a{
+    padding: 10px 15px;
+    color:#fff;
+    text-transform: uppercase;
+}
+.introImg{
+    width: 100%;
+
+}
+.header{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: "header";
+    justify-content: center;
+    align-items: center;
+}
+.header img, .header .gatsby-image-outer-wrapper{
+    grid-area: header;
+    height: 400px;
+    object-fit: cover;
+}
+.header h1{
+    grid-area: header;
+    font-size: 112px;
+}
+@media (max-width:900px){
+    .header h1{
+        grid-area: header;
+        font-size: 72px;
+    }  
 }

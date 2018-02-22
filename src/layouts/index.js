@@ -9,7 +9,7 @@ import style from './style.css'
 const TemplateWrapper = ({ children }) => (
   <MuiThemeProvider muiTheme={Theme}>
     <div>
-      <Helmet title="Home | Anormal Space" />
+      <Helmet title="Acasă | Anormal Space" />
       <Navbar />
       <div>{children()}</div>
     </div>

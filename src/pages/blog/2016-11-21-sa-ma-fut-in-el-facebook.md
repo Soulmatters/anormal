@@ -5,7 +5,7 @@ path: 2016/11/21/sa-ma-fut-in-el-facebook
 title: Să mă fut în el Facebook.
 date: 2016-11-21T11:45:46+02:00
 description: De-a lungul timpului am tot avut divergențe cu domnia sa Facebook. Am tot promis că gata, închid contul, nu mai folosesc. Dar are o metodă foarte bună de a te lega de dânsa. Era fr
-image: /img/2017/01/dwarf-1336495_1920.jpg
+image: "/img/2017/01/dwarf-1336495_1920.jpg"
 
 ---
 De-a lungul timpului am tot avut divergențe cu domnia sa **Facebook**. Am tot promis că gata, închid contul, nu mai folosesc. Dar are o metodă foarte bună de a te lega de dânsa. Era frumos la început când era un loc pentru oameni și prieteni. Dar acum este o bază de date, iar noi suntem produsele. Nu aș fi avut o problemă nici cu asta, dar când am creat acest blog și ca orice om am vrut să distribui, mi-a zis că site-ul e suspect de spam. Serios??!! Cum **dracu**???!! Aveam un articol, certificat SSL, nu am făcut spam cu mailu, nici măcar nu setasem serverul să trimită mail... Și da mă gândesc că o fi o chestie bine gândită ca să împiedice spamul. Dar cum morții mă-tii să fie site-ul meu cu spam când văd sute de articole spam, și sunt mult mai multe, dar nu le văd eu. 

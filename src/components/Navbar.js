@@ -13,12 +13,24 @@ const Navbar = () => (
         <img
           src={logo}
           alt="Anormal space"
-          style={{ width: '60px', marginRight: 10 }}
+          style={{ width: '60px', marginRight: 10, flex: 0 }}
         />
       </Link>
     }
     iconStyleLeft={{ display: 'none' }}
-  />
+ 
+  >
+  <div style={{
+    height:'64px',
+    display: 'flex',
+    flexFlow: 'wrap row',
+    alignItems: 'center',
+    color: '#fff'
+  }} className="menu">
+  <Link to="/">  Acasă</Link>
+  <Link to="/despre-noi">Despre noi</Link>
+  </div>
+  </AppBar>
 )
 
 export default Navbar
