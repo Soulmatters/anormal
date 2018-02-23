@@ -1,17 +1,14 @@
 import React from 'react'
 import Link from 'gatsby-link'
-import Script from 'react-load-script'
 import graphql from 'graphql'
 import Image from 'gatsby-image'
 import {
   Card,
-  CardActions,
   CardHeader,
   CardMedia,
   CardTitle,
   CardText,
 } from 'material-ui/Card'
-import FlatButton from 'material-ui/FlatButton'
 
 export default class IndexPage extends React.Component {
 
@@ -42,18 +39,18 @@ export default class IndexPage extends React.Component {
           <div className="cards">       
 
                {data.allWordpressPost.edges.map(({ node }) => (
-                <Link to={node.date + '/' +  node.slug} css={{ textDecoration: `none` }}>
+
+                <Link key={node.id} to={node.date + '/' +  node.slug} css={{ textDecoration: `none` }}>
 <Card className="cardName" style={{
   maxWidth: '460px',
   height: '100%',
-  background: "#ff4b1f", 
   background:' linear-gradient(to right, #fd746c, #ff9068)',
   color: '#fff',
 }}>
 <CardHeader
   title={node.author.name}
   subtitle="autor anormal"
-  avatar={node.author.avatar_urls.wordpress_48}
+  avatar={node.author.avatar_urls.wordpress_48.replace('http', 'https')}
 />
 <CardMedia>
 <Image resolutions={ node.featured_media.localFile.childImageSharp.resolutions } style={{
@@ -87,6 +84,7 @@ export const pageQuery = graphql`
     allWordpressPost(sort: { fields: [date], order:DESC }) {
       edges {
         node {
+          id
           title
           excerpt
           slug
