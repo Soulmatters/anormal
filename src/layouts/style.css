@@ -23,6 +23,9 @@ a{
         margin:10px;
     }
 }
+.cardName{
+    background: linear-gradient(to right, #fd746c, #ff9068);
+}
 .h1-is-center{
     text-align: center;
     font-size: 70px;

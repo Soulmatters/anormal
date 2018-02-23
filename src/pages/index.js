@@ -46,7 +46,7 @@ export default class IndexPage extends React.Component {
 <Card className="cardName" style={{
   maxWidth: '460px',
   height: '100%',
-  background:' linear-gradient(to right, #fd746c, #ff9068)',
+ 
   color: '#fff',
 }}>
 <CardHeader
