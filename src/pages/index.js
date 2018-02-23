@@ -2,6 +2,8 @@ import React from 'react'
 import Link from 'gatsby-link'
 import graphql from 'graphql'
 import Image from 'gatsby-image'
+import './style.css'
+
 import {
   Card,
   CardHeader,
